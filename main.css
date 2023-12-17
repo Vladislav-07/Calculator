@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+}
+
+h1 {
+  /* border: 1px solid red; */
+  text-align: center;
+  color: white;
+}
+
+.input-flex {
+  max-width: 350px;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.input-znak {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+}
