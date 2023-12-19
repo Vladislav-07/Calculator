@@ -1,234 +1,50 @@
-let numberOne = ''
-let numberTwo = ''
-let znak = ''
-let result = '0'
+let display = document.querySelector(".display")
+let buttons = Array.from(document.querySelectorAll(".button"))
 
-let h1 = document.querySelector('.result')
+buttons.map((button) => {
+  button.addEventListener('click', (e) => {
 
-function num1() {
+   let symbol = document.querySelectorAll(".display")[0].textContent.length
+   console.log(symbol)
 
-  if (result != 0) {
-    location.reload()
-  }
+   if (symbol === 9) {
+    display.classList.toggle('display2')
+   }
 
-  if (znak === '') {
-    numberOne += '1'
-    h1.innerHTML = numberOne 
-  }
+   if (symbol === 12) {
+    display.classList.toggle('display3')
+   }
 
-  if (znak != '') {
-    numberTwo += '1'
-    h1.innerHTML = numberTwo
-  }
+   switch(e.target.innerText) {
+    case "AC": 
+      display.innerText = "0"
+      location.reload()
+      break 
 
-}
+    case "=": 
+      try {
+        display.innerText = eval(display.innerText)
+      }
+      catch (e) {display.innerText = "Ошибка."}
+      break
 
-function num2() {
+    case "%":
+      let passedText = display.innerText + "/100"
+      display.innerText = eval(passedText)
+      break
 
-  if (result != 0) {
-    location.reload()
-  }
+    case "+/-": 
+      display.innerText = "-"
+      break
 
-  if (znak === '') {
-    numberOne += '2'
-    h1.innerHTML = numberOne
-  }
+    default: 
+      if (display.innerText === "0" && e.target.innerText !== ".") {
+        display.innerText = e.target.innerText
+      } 
 
-  if (znak != '') {
-    numberTwo += '2'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num3() {
-
-  if (result != 0) {
-    location.reload()
-  }
-
-  if (znak === '') {
-    numberOne += '3'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '3'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num4() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '4'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '4'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num5() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '5'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '5'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num6() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '6'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '6'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num7() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '7'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '7'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num8() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '8'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '8'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num9() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '9'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '9'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function num0() {
-
-  if (result != 0) {
-    location.reload()
-  }
-  
-  if (znak === '') {
-    numberOne += '0'
-    h1.innerHTML = numberOne
-  }
-
-  if (znak != '') {
-    numberTwo += '0'
-    h1.innerHTML = numberTwo
-  }
-
-}
-
-function plus() {
-  znak = '+'
-}
-
-function minus() {
-  znak = '-'
-}
-
-function ymozit() {
-  znak = '*'
-}
-
-function podelit() {
-  znak = '/'
-}
-
-function bacspace() {
-  location.reload()
-}
-
-function rovno() {
-
-  if (znak === '+'){
-    result = Number(numberOne) + Number(numberTwo)
-    h1.innerHTML = result
-  }
-
-  if (znak === '-'){
-    result = Number(numberOne) - Number(numberTwo)
-    h1.innerHTML = result
-  }
-
-  if (znak === '*'){
-    result = Number(numberOne) * Number(numberTwo)
-    h1.innerHTML = result
-  }
-
-  if (znak === '/'){
-    result = Number(numberOne) / Number(numberTwo)
-    h1.innerHTML = result
-  }
-
-  if (znak === '') {
-    alert('ошибка, знак не выбран')
-  }
-
-}
+      else {
+        display.innerText += e.target.innerText
+      }
+   }
+  })
+})
