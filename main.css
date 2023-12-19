@@ -9,13 +9,16 @@ body {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .calculator {
+  align-items: center;
   width: 470px;
   height: 680px;
   background-color: black;
-  margin: 150px auto;
+  margin-top: calc(7%);
   border-radius: 20px;
   padding: 10px;
   overflow: hidden;
