@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculator</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="adaptivindex.css"/>
+    <script src="app.js" defer></script>
 
-  <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="adaptivIndexx.css">
-  <script src="app.js" defer></script>
+    <div class="calculator">
 
-</head>
-<body>
+      <div class="display">0</div>
+      
+      <div class="buttons">
+        <button class="button btn-grey">AC</button>
+        <button class="button btn-grey">+/-</button>
+        <button class="button btn-grey">%</button>
+        <button class="button btn-orange">/</button>
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button btn-orange">*</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button btn-orange">-</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button btn-orange">+</button>
+        <button class="button zero-btn">0</button>
+        <button class="button">.</button>
+        <button class="button btn-orange result">=</button>
+      </div>
 
-  <div class="input-flex">
-
-    <h1 class="result">0</h1>
-
-    <div class="input-number">
-      <button class="1" onclick="num1()">1</button>
-      <button class="2" onclick="num2()">2</button>
-      <button class="3" onclick="num3()">3</button>
-      <button class="4" onclick="num4()">4</button>
-      <button class="5" onclick="num5()">5</button>
-      <button class="6" onclick="num6()">6</button>
-      <button class="7" onclick="num7()">7</button>
-      <button class="8" onclick="num8()">8</button>
-      <button class="9" onclick="num9()">9</button>
-      <button class="0" onclick="num0()">0</button>
     </div>
 
-    <div class="input-znak">
-      <button class="plus" onclick="plus()">+</button>
-      <button class="minus" onclick="minus()">-</button>
-      <button class="ymozit" onclick="ymozit()">x</button>
-      <button class="podelit" onclick="podelit()">:</button>
-      <button class="rovno" onclick="rovno()">=</button>
-      <button class="bacspace" onclick="bacspace()">C</button>
-    </div>
-  </div>
-  
-</body>
+  </body>
 </html>
